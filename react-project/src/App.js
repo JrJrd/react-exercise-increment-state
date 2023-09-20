@@ -37,8 +37,8 @@ class App extends Component {
           >
             +10
           </Button>
-          <input type="number" value={this.state.customUnit} onChange={(e) => this.setState({customUnit: e.target.value})}/>
-          <Button >INCR</Button>
+          <input type="number" value={this.state.customUnit} onChange={(e) => this.setState({customUnit: Number(e.target.value)})}/>
+          <Button onClick={() => this.updateCount(this.state.customUnit)} >INCR</Button>
           <Button
           onClick={() => this.updateCount(-this.state.count)}
           >
